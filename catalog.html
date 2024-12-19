@@ -9,83 +9,91 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #d9f7d7; /* Light green background color */
-            margin: 0;
-            padding: 0;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
 
         /* Navigation bar styles */
         .navbar {
-            display: flex;
-            align-items: center;
+            display: flex; /* Arrange items in a row */
+            align-items: center; /* Center items vertically */
             background-color: #a6e6a6; /* Light green color for the navigation bar */
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow under the navbar */
+            padding: 10px; /* Add space inside the navbar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
 
+        /* Button styles in the navigation bar */
         .navbar button {
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-size: 16px;
-            margin: 0 10px;
-            cursor: pointer;
-            transition: transform 0.2s, color 0.2s;
+            background: none; /* No background color */
+            border: none; /* Remove borders */
+            color: #ffffff; /* White text color */
+            font-size: 16px; /* Medium font size */
+            margin: 0 10px; /* Add space between buttons */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: transform 0.2s, color 0.2s; /* Smooth hover effect */
         }
 
+        /* Hover effect for navigation buttons */
         .navbar button:hover {
-            color: #f8f8ff;
-            transform: scale(1.1);
+            color: #f8f8ff; /* Slightly lighter text color on hover */
+            transform: scale(1.1); /* Enlarge button slightly on hover */
         }
 
+        /* Logo styles */
         .logo {
-            height: 40px;
-            width: 40px;
-            background-color: #ffffff;
-            margin-right: 20px;
-            border-radius: 50%;
+            height: 40px; /* Set height of the logo */
+            width: 40px; /* Set width of the logo */
+            background-color: #ffffff; /* White background for the logo */
+            margin-right: 20px; /* Space between logo and buttons */
+            border-radius: 50%; /* Make the logo circular */
         }
 
-        /* Catalog styles */
+        /* Styles for the catalog section */
         .catalog {
-            display: flex;
-            flex-wrap: wrap; /* Wrap items to the next row */
+            display: flex; /* Arrange items in a row */
+            flex-wrap: wrap; /* Allow items to wrap to the next row */
             justify-content: center; /* Center items horizontally */
-            padding: 20px;
-            gap: 20px; /* Space between items */
+            padding: 20px; /* Add padding around the catalog */
+            gap: 20px; /* Space between catalog items */
         }
 
+        /* Styles for individual catalog items */
         .item {
-            background-color: #ffffff; /* White background for items */
+            background-color: #ffffff; /* White background for each item */
             border: 1px solid #a6e6a6; /* Light green border */
-            border-radius: 8px; /* Rounded corners */
+            border-radius: 8px; /* Rounded corners for items */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
             width: 200px; /* Fixed width for items */
-            padding: 10px;
+            padding: 10px; /* Padding inside each item */
             text-align: center; /* Center-align text */
         }
 
+        /* Styles for item images */
         .item img {
             max-width: 100%; /* Make images responsive */
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 10px;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 4px; /* Slightly rounded corners for images */
+            margin-bottom: 10px; /* Space below the image */
         }
 
+        /* Styles for item titles */
         .item h3 {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 18px; /* Medium font size */
+            margin: 10px 0; /* Space above and below the title */
             color: #3d6b3d; /* Darker green text */
         }
 
+        /* Styles for item descriptions */
         .item p {
-            font-size: 14px;
-            margin: 5px 0;
+            font-size: 14px; /* Small font size */
+            margin: 5px 0; /* Space above and below the text */
             color: #5a8a5a; /* Medium green text */
         }
 
+        /* Styles for item prices */
         .item .price {
-            font-weight: bold;
-            color: #2d582d; /* Even darker green for price */
+            font-weight: bold; /* Make the price text bold */
+            color: #2d582d; /* Darker green for emphasis */
         }
     </style>
 </head>
@@ -93,9 +101,13 @@
 
     <!-- Navigation bar section -->
     <div class="navbar">
+        <!-- Placeholder for the logo -->
         <div class="logo"></div>
+        <!-- Home button that redirects to the home page -->
         <button onclick="location.href='index.html'">Home</button>
+        <!-- Browse button that redirects to the catalog page -->
         <button onclick="location.href='catalog.html'">Browse</button>
+        <!-- Cart button that redirects to the cart page -->
         <button onclick="location.href='cart.html'">Cart</button>
     </div>
 
@@ -103,25 +115,37 @@
     <div class="catalog">
         <!-- Example item 1 -->
         <div class="item">
+            <!-- Placeholder image for the item -->
             <img src="placeholder.jpg" alt="Item 1">
+            <!-- Title of the item -->
             <h3>Item 1</h3>
+            <!-- Short description of the item -->
             <p>A short description of Item 1.</p>
+            <!-- Price of the item including tax -->
             <p class="price">$10.99 (Tax incl.)</p>
         </div>
 
         <!-- Example item 2 -->
         <div class="item">
+            <!-- Placeholder image for the item -->
             <img src="placeholder.jpg" alt="Item 2">
+            <!-- Title of the item -->
             <h3>Item 2</h3>
+            <!-- Short description of the item -->
             <p>A short description of Item 2.</p>
+            <!-- Price of the item including tax -->
             <p class="price">$15.99 (Tax incl.)</p>
         </div>
 
         <!-- Example item 3 -->
         <div class="item">
+            <!-- Placeholder image for the item -->
             <img src="placeholder.jpg" alt="Item 3">
+            <!-- Title of the item -->
             <h3>Item 3</h3>
+            <!-- Short description of the item -->
             <p>A short description of Item 3.</p>
+            <!-- Price of the item including tax -->
             <p class="price">$20.99 (Tax incl.)</p>
         </div>
 
@@ -130,4 +154,3 @@
 
 </body>
 </html>
-
