@@ -1,0 +1,114 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9f7d7; /* Light green background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #a6e6a6; /* Light green */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.navbar button:hover {
+    color: #f8f8ff;
+    transform: scale(1.1);
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #e6f7e6; /* Slightly lighter green */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    color: #3d6b3d;
+    margin-bottom: 10px;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #a6e6a6;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Catalog styles */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.item {
+    background-color: #ffffff;
+    border: 1px solid #a6e6a6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #3d6b3d;
+}
+
+.item p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #5a8a5a;
+}
+
+.item .price {
+    font-weight: bold;
+    color: #2d582d;
+}
+
