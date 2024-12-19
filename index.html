@@ -3,99 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pastel Blue Webpage</title>
+    <title>Light Green Webpage</title>
     <style>
+        /* General styles for the page */
         body {
             font-family: Arial, sans-serif;
-            background-color: #d7e9f7;
+            background-color: #d9f7d7; /* Light green background color */
             margin: 0;
             padding: 0;
         }
 
-        /* Navigation bar styles */
+        /* Styles for the navigation bar */
         .navbar {
             display: flex;
             align-items: center;
-            background-color: #a9cbe6;
+            background-color: #a6e6a6; /* Light green color for the navigation bar */
             padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow under the navbar */
         }
 
+        /* Styles for the buttons in the navigation bar */
         .navbar button {
-            background: none;
-            border: none;
-            color: #ffffff;
+            background: none; /* No background for buttons */
+            border: none; /* No border for buttons */
+            color: #ffffff; /* White text for buttons */
             font-size: 16px;
-            margin: 0 10px;
-            cursor: pointer;
-            transition: transform 0.2s, color 0.2s;
+            margin: 0 10px; /* Space between buttons */
+            cursor: pointer; /* Pointer cursor for buttons */
+            transition: transform 0.2s, color 0.2s; /* Smooth hover effects */
         }
 
+        /* Hover effect for navigation buttons */
         .navbar button:hover {
-            color: #f8f8ff;
-            transform: scale(1.1);
+            color: #f8f8ff; /* Slightly brighter text on hover */
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
         }
 
+        /* Styles for the logo area in the navigation bar */
         .logo {
-            height: 40px;
-            width: 40px;
-            background-color: #ffffff;
-            margin-right: 20px;
-            border-radius: 50%;
+            height: 40px; /* Height of the logo */
+            width: 40px; /* Width of the logo */
+            background-color: #ffffff; /* White color for the logo */
+            margin-right: 20px; /* Space between logo and buttons */
+            border-radius: 50%; /* Circular shape for the logo */
         }
 
-        /* Main content styles */
+        /* Main content area styles */
         .main-content {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: calc(100vh - 60px);
-            text-align: center;
-            color: #345b7d;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center elements horizontally */
+            justify-content: center; /* Center elements vertically */
+            height: calc(100vh - 60px); /* Full height minus the height of the navbar */
+            text-align: center; /* Center text alignment */
+            color: #3d6b3d; /* Darker green text color */
         }
 
+        /* Styles for the main heading */
         .main-content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 36px; /* Large font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
         }
 
+        /* Styles for the paragraph below the heading */
         .main-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
+            font-size: 18px; /* Medium font size for the paragraph */
+            margin-bottom: 30px; /* Space below the paragraph */
         }
 
+        /* Styles for the "Begin Shopping" button */
         .begin-button {
-            background-color: #a9cbe6;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
+            background-color: #a6e6a6; /* Light green background color for the button */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px; /* Padding inside the button */
+            border: none; /* No border for the button */
+            border-radius: 5px; /* Rounded corners for the button */
+            font-size: 16px; /* Medium font size for the button */
+            cursor: pointer; /* Pointer cursor for the button */
+            transition: transform 0.2s, background-color 0.2s; /* Smooth hover effects */
         }
 
+        /* Hover effect for the "Begin Shopping" button */
         .begin-button:hover {
-            background-color: #7daec9;
-            transform: scale(1.1);
+            background-color: #7ebc7e; /* Slightly darker green on hover */
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation bar -->
+    <!-- Navigation bar section -->
     <div class="navbar">
+        <!-- Placeholder for the logo -->
         <div class="logo"></div>
+        <!-- Home button that redirects to the home page -->
         <button onclick="location.href='home.html'">Home</button>
+        <!-- Browse button that redirects to the browse page -->
         <button onclick="location.href='browse.html'">Browse</button>
+        <!-- Cart button that redirects to the cart page -->
         <button onclick="location.href='cart.html'">Cart</button>
     </div>
 
-    <!-- Main content area -->
+    <!-- Main content section -->
     <div class="main-content">
+        <!-- Main heading for the page -->
         <h1>Welcome to Our Store</h1>
+        <!-- Placeholder paragraph for the bio or description -->
         <p>Your bio goes here. This is the perfect place to introduce your store or provide a welcoming message.</p>
+        <!-- Button to start shopping that redirects to the browse page -->
         <button class="begin-button" onclick="location.href='browse.html'">Begin Shopping</button>
     </div>
 
