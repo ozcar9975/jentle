@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Blue Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d7e9f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #a9cbe6;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .navbar button:hover {
+            color: #f8f8ff;
+            transform: scale(1.1);
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+            background-color: #ffffff;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        /* Main content styles */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 60px);
+            text-align: center;
+            color: #345b7d;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .begin-button {
+            background-color: #a9cbe6;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .begin-button:hover {
+            background-color: #7daec9;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <div class="logo"></div>
+        <button onclick="location.href='home.html'">Home</button>
+        <button onclick="location.href='browse.html'">Browse</button>
+        <button onclick="location.href='cart.html'">Cart</button>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <h1>Welcome to Our Store</h1>
+        <p>Your bio goes here. This is the perfect place to introduce your store or provide a welcoming message.</p>
+        <button class="begin-button" onclick="location.href='browse.html'">Begin Shopping</button>
+    </div>
+
+</body>
+</html>
+
