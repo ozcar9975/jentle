@@ -22,7 +22,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
 
-        /* Button styles in the navigation bar */
         .navbar button {
             background: none; /* No background color */
             border: none; /* Remove borders */
@@ -33,19 +32,33 @@
             transition: transform 0.2s, color 0.2s; /* Smooth hover effect */
         }
 
-        /* Hover effect for navigation buttons */
         .navbar button:hover {
             color: #f8f8ff; /* Slightly lighter text color on hover */
             transform: scale(1.1); /* Enlarge button slightly on hover */
         }
 
-        /* Logo styles */
         .logo {
             height: 40px; /* Set height of the logo */
             width: 40px; /* Set width of the logo */
             background-color: #ffffff; /* White background for the logo */
             margin-right: 20px; /* Space between logo and buttons */
             border-radius: 50%; /* Make the logo circular */
+        }
+
+        /* Filter and category section styles */
+        .filter-category {
+            display: flex; /* Arrange filters and categories in a row */
+            justify-content: center; /* Center them horizontally */
+            gap: 20px; /* Space between filters and categories */
+            padding: 20px; /* Add padding around the section */
+            background-color: #e6f7e6; /* Slightly lighter green background */
+        }
+
+        .filter-category select {
+            padding: 8px; /* Padding inside the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #a6e6a6; /* Light green border */
+            font-size: 14px; /* Font size for dropdown text */
         }
 
         /* Styles for the catalog section */
@@ -57,7 +70,6 @@
             gap: 20px; /* Space between catalog items */
         }
 
-        /* Styles for individual catalog items */
         .item {
             background-color: #ffffff; /* White background for each item */
             border: 1px solid #a6e6a6; /* Light green border */
@@ -68,7 +80,6 @@
             text-align: center; /* Center-align text */
         }
 
-        /* Styles for item images */
         .item img {
             max-width: 100%; /* Make images responsive */
             height: auto; /* Maintain aspect ratio */
@@ -76,21 +87,18 @@
             margin-bottom: 10px; /* Space below the image */
         }
 
-        /* Styles for item titles */
         .item h3 {
             font-size: 18px; /* Medium font size */
             margin: 10px 0; /* Space above and below the title */
             color: #3d6b3d; /* Darker green text */
         }
 
-        /* Styles for item descriptions */
         .item p {
             font-size: 14px; /* Small font size */
             margin: 5px 0; /* Space above and below the text */
             color: #5a8a5a; /* Medium green text */
         }
 
-        /* Styles for item prices */
         .item .price {
             font-weight: bold; /* Make the price text bold */
             color: #2d582d; /* Darker green for emphasis */
@@ -111,46 +119,84 @@
         <button onclick="location.href='cart.html'">Cart</button>
     </div>
 
+    <!-- Filter and category section -->
+    <div class="filter-category">
+        <!-- Filter by price dropdown -->
+        <select id="price-filter">
+            <option value="">Sort by Price</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+
+        <!-- Filter by category dropdown -->
+        <select id="category-filter">
+            <option value="">Select Category</option>
+            <option value="rings">Rings</option>
+            <option value="bracelets">Bracelets</option>
+            <option value="glass">Glass</option>
+            <option value="crystals">Crystals</option>
+        </select>
+    </div>
+
     <!-- Catalog section -->
-    <div class="catalog">
+    <div class="catalog" id="catalog-items">
         <!-- Example item 1 -->
-        <div class="item">
-            <!-- Placeholder image for the item -->
+        <div class="item" data-category="rings" data-price="10.99">
             <img src="placeholder.jpg" alt="Item 1">
-            <!-- Title of the item -->
             <h3>Item 1</h3>
-            <!-- Short description of the item -->
             <p>A short description of Item 1.</p>
-            <!-- Price of the item including tax -->
             <p class="price">$10.99 (Tax incl.)</p>
         </div>
 
         <!-- Example item 2 -->
-        <div class="item">
-            <!-- Placeholder image for the item -->
+        <div class="item" data-category="bracelets" data-price="15.99">
             <img src="placeholder.jpg" alt="Item 2">
-            <!-- Title of the item -->
             <h3>Item 2</h3>
-            <!-- Short description of the item -->
             <p>A short description of Item 2.</p>
-            <!-- Price of the item including tax -->
             <p class="price">$15.99 (Tax incl.)</p>
         </div>
 
         <!-- Example item 3 -->
-        <div class="item">
-            <!-- Placeholder image for the item -->
+        <div class="item" data-category="glass" data-price="20.99">
             <img src="placeholder.jpg" alt="Item 3">
-            <!-- Title of the item -->
             <h3>Item 3</h3>
-            <!-- Short description of the item -->
             <p>A short description of Item 3.</p>
-            <!-- Price of the item including tax -->
             <p class="price">$20.99 (Tax incl.)</p>
         </div>
-
-        <!-- Add more items as needed -->
     </div>
 
+    <script>
+        // JavaScript to handle filtering and sorting functionality
+        const priceFilter = document.getElementById('price-filter');
+        const categoryFilter = document.getElementById('category-filter');
+        const catalogItems = document.getElementById('catalog-items');
+
+        priceFilter.addEventListener('change', () => {
+            const sortOrder = priceFilter.value;
+            const items = Array.from(catalogItems.children);
+
+            items.sort((a, b) => {
+                const priceA = parseFloat(a.dataset.price);
+                const priceB = parseFloat(b.dataset.price);
+                return sortOrder === 'asc' ? priceA - priceB : priceB - priceA;
+            });
+
+            items.forEach(item => catalogItems.appendChild(item));
+        });
+
+        categoryFilter.addEventListener('change', () => {
+            const selectedCategory = categoryFilter.value;
+            const items = Array.from(catalogItems.children);
+
+            items.forEach(item => {
+                if (!selectedCategory || item.dataset.category === selectedCategory) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
